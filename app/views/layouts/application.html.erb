@@ -14,9 +14,9 @@
 <% end %>
 <% if current_user %>
   <p>Hello, <%= current_user.email %></p>
-  <%= link_to 'Logout', session_path(session), method: :delete%>
+  <%= link_to 'Logout', session_path(session), method: :delete, class: "btn btn-default" %>
 <%else%>
-  <%= link_to "Please Login", new_session_path %>
+  <%= link_to "Please Login", new_session_path, class: "btn btn-default" %>
 <%end%>
 <%= yield %>
 
